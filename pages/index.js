@@ -1,7 +1,16 @@
 import Gallery from "../components/Gallery";
+import Head from "next/head";
 
 export default function Home({ imgData }) {
-  return <Gallery imgData={imgData} />;
+  return (
+    <>
+      <Head>
+        <title>Image Gallery</title>
+        <meta name="description" content="Image gallery task" />
+      </Head>
+      <Gallery imgData={imgData} />;
+    </>
+  );
 }
 
 export async function getStaticProps() {
